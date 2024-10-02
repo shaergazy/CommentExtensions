@@ -48,6 +48,7 @@ namespace CommentExtensions
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await CommentRemoverCommand.InitializeAsync(this);
+            await CommentRemover.BrackerAdderCommand.InitializeAsync(this);
         }
 
         #endregion
